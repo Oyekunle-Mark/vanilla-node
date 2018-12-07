@@ -1,0 +1,12 @@
+{
+  "name": "static_file_server",
+  "version": "1.0.0",
+  "description": "a static file server that serves the contents of files ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Oyekunle Mark",
+  "license": "ISC"
+}
