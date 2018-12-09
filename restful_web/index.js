@@ -1,10 +1,18 @@
 var http = require('http');
 var url = require('url');
+var fs = require('fs');
+
+//SSL key and cert given as options
+var options = {
+	key: fs.readFileSync('./key.pem'),
+	cert: fs.readFileSync('./key-cert.pem')
+};
 
 // declare a js array to hold data
 var items = [];
 
-var server = http.createServer(function(req, res) {
+//pass options object first
+var server = http.createServer(options, function(req, res) {
 	switch(req.method) {
 		case 'POST': 	// for create processes
 			var item = '';
